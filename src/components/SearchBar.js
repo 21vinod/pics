@@ -3,13 +3,13 @@ import { useState } from "react";
 function SearchBar({ onSubmit }) {
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    onSubmit('cars');
+    onSubmit(term);
   };
 
   const [term, setTerm] = useState('');
 
   function handleChange (event){
-  setTerm(event.target.value+1);
+  setTerm(event.target.value);
   };
 
   return (
